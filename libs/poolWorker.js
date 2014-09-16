@@ -148,7 +148,7 @@ module.exports = function(logger){
                         
                         pool.daemon.cmd('validateaddress', [workerName], function (results) {
                             var isValid = results.filter(function (r) {
-                                return r.response.isvalid
+                                return r.response.isValid
                             }).length > 0;
                             authCallback(isValid);
                         });
